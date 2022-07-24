@@ -1,28 +1,31 @@
-import months from './months.js'
 
-// Filtra meses
-const filteredMonths = months.filter( (months)=> {
-    return months.days === 31
+import carros from './carros.js'
+
+
+
+const filteredCarros= carros.filter( (carros)=> {
+    return carros.marca === 'fiat'
 })
 
-console.log(filteredMonths)
+console.log(filteredCarros)
 
 let toPrint = ''
 
-// Lista meses
-filteredMonths.forEach(month => {
-   toPrint += month.month + ', '
+// Lista 
+filteredCarros.forEach(carros => {
+   toPrint += carros.carros + ', '
 });
 
 // for( let c = 0; c < filteredMonths.length; c++ ){
 
 // }
 
-let meses = [30,30,30] // array comum
+let carro = [30,30,30] // array comum
 
 // Reduce - função com todos os itens do array e devolve um valor único
-let sumMonthDays = filteredMonths.reduce( (prev, next) => {
-    return {days: prev.days + next.days}
+
+let sumCarroValor = filteredCarros.reduce( (prev, next) => {
+    return {valor: prev.valor + next.valor}
 })
 
 // Map - funções em arrays de retorno individual (cada valor array)
